@@ -293,11 +293,11 @@ Create a Pull Request and wait for it to be reviewed before merging.
 
 ## 👩‍💻 Arisha
 
-- Frontend Development
-- UI/UX
-- AI Integration
-- Final Demo & Presentation
-- Git Coordinator
+- Git coordinator
+- Frontend lead
+- Product integration
+- Final demo
+- Merge everyone's work
 
 ---
 
@@ -310,22 +310,22 @@ Create a Pull Request and wait for it to be reviewed before merging.
 
 ---
 
-## 👩‍💻 Shubha
+## 👩‍💻 Shreya
 
-- Gemini Prompt Engineering
-- ADK Agent Development
-- Requirements Engineer Agent
-- Solution Architect Agent
+- AI agents
+- System architecture
+- Gemini integration
+- ADK workflow
 
 ---
 
-## 👩‍💻 Shreya
+## 👩‍💻 Shubha
 
-- Quality Review Agent
-- Talent Scout Agent
-- Project Pulse Agent
-- Conflict Resolution Agent
-- System Architecture
+- Prompt engineering
+- Test datasets
+- Documentation
+- QA testing
+- UI support
 
 ---
 
