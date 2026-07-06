@@ -4,8 +4,8 @@ from typing import Optional
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
-from backend.database.mock_data import db
-from backend.database.models import (
+from database.mock_data import db
+from database.models import (
     BusinessRequest,
     BusinessRequestCreate,
     Project,
