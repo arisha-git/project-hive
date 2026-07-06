@@ -13,6 +13,8 @@ from database.models import (
     StudentCreate,
     StudentProfile,
 )
+from services.gemini_service import generate_prd
+from agents.orchestrator import AgentOrchestrator
 
 app = FastAPI(title="ProjectHive API")
 
@@ -157,16 +159,29 @@ def get_business_request(request_id: str) -> Optional[BusinessRequest]:
 @app.post("/business-requests", response_model=BusinessRequest)
 def create_business_request(payload: BusinessRequestCreate) -> BusinessRequest:
     request_id = _next_id("br", db.business_requests)
+
+    orchestrator = AgentOrchestrator()
+    result = orchestrator.execute(payload.description)
+    
+    prd = result["prd"]
+    tech_stack = result["tech_stack"]
+    quality_score = result["quality_score"]
+
     new_request = BusinessRequest(
         id=request_id,
         business_name=payload.business_name,
         owner_name=payload.owner_name,
         email=payload.email,
         description=payload.description,
+        prd=prd,
+        tech_stack=tech_stack,
+        quality_score=quality_score,
         created_at=datetime.now(timezone.utc).isoformat(),
         status="submitted",
     )
+
     db.add_request(new_request)
+
     return new_request
 
 

@@ -116,19 +116,24 @@ const Hero = ({ onStart }) => {
         </div>
 
         <nav className="hidden lg:flex gap-8">
-          {[
-            "GitHub",
-          ].map((item, i) => (
-            <a
-              key={item}
-              href="#"
-              className="text-sm hover:text-gray-300 animate-blur-fade-up"
-              style={{ animationDelay: `${100 + i * 50}ms` }}
-            >
-              {item}
-            </a>
-          ))}
-        </nav>
+  {[
+    {
+      name: "GitHub",
+      link: "https://github.com/arisha-git/project-hive",
+    },
+  ].map((item, i) => (
+    <a
+      key={item.name}
+      href={item.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-sm hover:text-gray-300 animate-blur-fade-up"
+      style={{ animationDelay: `${100 + i * 50}ms` }}
+    >
+      {item.name}
+    </a>
+  ))}
+</nav>
 
         <div className="flex gap-4">
 

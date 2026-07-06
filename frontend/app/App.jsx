@@ -43,7 +43,7 @@ const App = () => {
   <GeneratedPRD
     requestId={requestId}
     onNext={() => handleTransition("matching")}
-  />
+/>
 )}
       
       {view === "matching" && (
