@@ -32,7 +32,7 @@ const GeneratedPRD = ({ onNext, requestId }) => {
 
     const loadPRD = async () => {
       const res = await fetch(
-        `http://127.0.0.1:8000/business-requests/${requestId}`
+        `https://project-hive-backend-iiud.onrender.com/business-requests/${requestId}`
       );
 
       const data = await res.json();

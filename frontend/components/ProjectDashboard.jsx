@@ -31,7 +31,7 @@ const ProjectDashboard = () => {
   useEffect(() => {
   const fetchProject = async () => {
     try {
-      const res = await fetch("http://127.0.0.1:8000/projects");
+      const res = await fetch("https://project-hive-backend-iiud.onrender.com/projects");
       const data = await res.json();
 
       if (data.length > 0) {

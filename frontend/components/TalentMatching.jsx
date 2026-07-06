@@ -48,7 +48,7 @@ const TalentMatching = ({ onNext, requestId }) => {
     const fetchMatches = async () => {
       try {
         const res = await fetch(
-          `http://127.0.0.1:8000/business-requests/${requestId}/match`,
+          `https://project-hive-backend-iiud.onrender.com/business-requests/${requestId}/match`,
           {
             method: "POST",
           }
@@ -96,7 +96,7 @@ const TalentMatching = ({ onNext, requestId }) => {
             whileTap={{ scale: 0.95 }}
             onClick={async () => {
   try {
-    await fetch("http://127.0.0.1:8000/projects", {
+    await fetch("https://project-hive-backend-iiud.onrender.com/projects", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

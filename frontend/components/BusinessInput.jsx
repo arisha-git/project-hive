@@ -35,7 +35,7 @@ const BusinessInput = ({ onNext }) => {
             whileTap={{ scale: 0.98 }}
             onClick={async () => {
   try {
-    const response = await fetch("http://127.0.0.1:8000/business-requests", {
+    const response = await fetch("https://project-hive-backend-iiud.onrender.com/business-requests", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
